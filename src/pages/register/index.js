@@ -197,6 +197,7 @@ function Register() {
           <input
             className={`input ${errors.date ? "error" : ""}`}
             type="date"
+            placeholder="Date"
             {...register("date", { required: true })}
           />{" "}
           {errors.date && <Span>{errors.date?.message}</Span>}
