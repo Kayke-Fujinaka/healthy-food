@@ -1,10 +1,10 @@
 # GCB Test: Healthy Eating
 
-<img src="./public/assets/img/gif.gif" width="430px" alt="Gif do Teste"><br>
+<img src="./public/assets/img/gif.gif" width="430px" alt="Gif do Teste">
 
 >  The Project is a test that simulates a website of recipes for healthy foods. Inside it has a Registration and Login system.
 
-Check the Application: https://healthy-foood.netlify.app
+Check the Application: https://healthy-foood.netlify.app\
 Video showing the application: https://www.youtube.com/watch?v=jwgasXZhZMQ
 ## :page_facing_up: Explanation
 
