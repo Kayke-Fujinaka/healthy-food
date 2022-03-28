@@ -1,6 +1,5 @@
 import styled from "styled-components";
 import { Link } from "react-router-dom";
-import devices from "../../Styles/devices";
 
 export const Form = styled.form`
   width: 100%;
@@ -21,7 +20,7 @@ export const Form = styled.form`
       padding: 0 15px;
       outline: none;
       cursor: pointer;
-      @media ${devices.mobileM} {
+      @media (max-width: 375px) {
         width: 250px;
         height: 35px;
         font-size: 11px;
@@ -47,7 +46,7 @@ export const DivCep = styled.div`
       color: #969696;
       padding: 15px;
       outline: none;
-      @media ${devices.mobileM} {
+      @media (max-width: 375px) {
         width: 220px;
         height: 35px;
         font-size: 11px;
