@@ -74,7 +74,7 @@ Before starting :checkered_flag:, you need to have [Git](https://git-scm.com) an
 
 ```bash
 # Clone this project
-$ git clone COLOCAR O LINK DO GITHUB
+$ git clone https://github.com/Kayke-Fujinaka/HealthyFood
 # Access
 $ cd teste-gcb
 # Install dependencies
