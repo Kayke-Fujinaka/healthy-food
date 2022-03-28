@@ -19,7 +19,16 @@ Em caso de o usuário tentar acessar alguma rota inexistente, ele será direcion
 
 O link do vídeo do Youtube apresentando todo o projeto está logo acima.
 
+## 📁 Pages
 
+The site consists of 6 different pages:
+
+- **Login:** The person can place them to place the data that has registered and to enter in the main page.
+- **Register:** The person can create their account on this page.
+- **Forgot Password:** The person can enter their email and receive a message in the email to reset their password.
+- **Home:** It is the main page of the project that presents a website of healthy recipes.
+- **Profile Informations:** A page that presents the data that the person has entered into the record.
+- **Error 404:** A page that appears when a person enters a route does not exist. Thus, just below presents a link to return to the login page.
 ## :dart: Features ##
 
 :heavy_check_mark: Healthy Eating Landing Page;\
