@@ -1,19 +1,24 @@
 # GCB Test: Healthy Eating
 
-<img src="./assets/img/Pokedex.gif" width="450px" alt="Gif do Teste">
+<img src="./public/assets/img/gif.gif" width="430px" alt="Gif do Teste"><br>
 
 >  The Project is a test that simulates a website of recipes for healthy foods. Inside it has a Registration and Login system.
 
-Check the application: site
-
+Check the Application: https://healthy-foood.netlify.app
+Video showing the application: https://www.youtube.com/watch?v=jwgasXZhZMQ
 ## :page_facing_up: Explanation
 
-O projeto começa com uma Tela de Login em que necessita registrar uma conta para ter acesso à página principal. Na parte abaixo do botão escrito “Login” tem um link que direcionará para a página de criação de conta. 
+A primeira página do projeto é a de login que apresenta um campo de email e senha. Os dois campos poderão ser preenchidos, após criar uma conta na página de registro e terem o acesso para a página principal.
 
-A página de criação de conta tem o yup instalado, então necessita que digite um endereço de email válido, uma senha com mais de 6 dígitos, entre outras validações que adicionei. Além de possuir uma API dos correios para preencher os campos que compõe o endereço. O endereço de email e senha estão sendo armazenados no Firebase, pois criei uma função no registro que irá armazenar esses seguintes dados. Após criar a conta a pessoa será direcionada automaticamente para a tela de login, mas, caso digite alguma informação errada aparecerá um alerta na tela informando o tal erro.
-Além disso, criei uma página de recuperação de senha e uma que ao digitar uma rota que não está no projeto será direcionado para a page 404.
+A página de registro apresenta 7 campos para serem preenchidos, sendo: nome, email, senha, confirmação de senha, data de nascimento, CPF e CEP. Os campos possuem uma validação, então precisam dos requisitos exigidos, sendo: não deixar um campo vazio, um email válido, uma senha de no mínimo 6 dígitos, o campo de senha e de confirmação de senha devem ser iguais, o CPF ter no mínimo e no máximo 11 dígitos e o CEP precisa ser um existente, pois está sendo preenchido com a API dos correios.  Caso, não seja preenchido corretamente. Na tela aparecerá um alerta notificando que precisa de mudança.
 
-Dentro da página principal, você tem o Landing Page do Healthy Food que criei um menu com a possibilidade de dar logout e ao deixar responsivo se transforma num menu hamburguer. Na seção de “Read Our Blog” tem um Carousel responsivo.
+Após a criação da conta, os dados serão armazenados no Firebase que possibilitarão o acesso pela página de login. O login deve ser preenchido com o email idêntico ao que foi registrado, então letras maiúsculas e minúsculas devem ser seguidas. A senha também segue as condições do email, e possui uma página específica para a recuperação de senha, que através do Firebase um email será enviado para o usuário. Ao logar, a pessoa será direcionada para a página principal que possui algumas seções e um menu com a opção de entrar no seu perfil que apresenta as informações do usuário e outro botão de logout que desloga você da página. A página de home está responsiva e com um menu hambúrguer ao chegar nos 800 de largura de resolução.  Além disso, foi adicionado um carrossel na seção de “Read Our Blog”.
+
+Não tem como acessar a página de home sem estar logado, pois ela está como uma rota privada, então precisa registrar uma conta. Com isso, para se deslogar é só clicar no botão do menu como dito no parágrafo acima.
+Em caso de o usuário tentar acessar alguma rota inexistente, ele será direcionado para uma página que exibe o Erro 404 e logo abaixo um link para ser direcionado a página de Login.
+
+O link do vídeo do Youtube apresentando todo o projeto está logo acima.
+
 
 ## :dart: Features ##
 
@@ -25,7 +30,12 @@ Dentro da página principal, você tem o Landing Page do Healthy Food que criei 
 :heavy_check_mark: Use the Post Office API to fill in the other fields that make up the address;\
 :heavy_check_mark: Store form data in Firebase;\
 :heavy_check_mark: Create the hamburger menu in the header;\
-:heavy_check_mark: Store form data in Firebase;
+:heavy_check_mark: Store form data in Firebase;\
+:heavy_check_mark: Password Reset with Firebase;\
+:heavy_check_mark: Home Private Route;\
+:heavy_check_mark: Button Logout;\
+:heavy_check_mark: Creating the page that shows the user information;\
+:heavy_check_mark: Home Private Route;
 
 ## :rocket: Technologies ##
 
@@ -73,9 +83,9 @@ We thank the following people who contributed to this project:
   <tr>
     <td align="center">
       <a href="#">
-        <img src="https://avatars.githubusercontent.com/u/98772000?s=400&u=80de9af672be7f75cc7a546838552cf63d5b82fe&v=4" width="100px;" alt="Foto do Kayke Fujinaka no GitHub"/><br>
+        <img src="https://avatars.githubusercontent.com/u/98772000?s=400&u=80de9af672be7f75cc7a546838552cf63d5b82fe&v=4" width="150px;" alt="Foto do Kayke Fujinaka no GitHub"/><br>
         <sub>
-          <b>Kayke Fujinaka</b>
+          <b>Kayke Alves Fujinaka</b>
         </sub>
       </a>
     </td>
