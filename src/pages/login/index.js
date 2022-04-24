@@ -2,18 +2,8 @@ import React, { useRef } from "react";
 import { useHistory } from "react-router-dom";
 import { toast } from "react-toastify";
 import "react-toastify/dist/ReactToastify.css";
-import {
-  Container,
-  Logo,
-  H1,
-  Input,
-  Directions,
-  ForgotPassword,
-  DivButtons,
-  ButtonSend,
-  DivForgot,
-  Register,
-} from "./styles";
+
+import * as S from "./styles";
 
 import firebase from "../../services/firebase";
 
@@ -33,7 +23,7 @@ function Join() {
       history.push("/home");
       return;
     } catch {
-      toast.error("Email ou senha inválida!", {
+      toast.error("Invalid email or password!", {
         autoClose: 1000,
         pauseOnHover: false,
       });
@@ -42,12 +32,12 @@ function Join() {
 
   return (
     <>
-      <Container>
-        <Logo src="./assets/img/illustration_login.svg"></Logo>
-        <H1>Join</H1>
+      <S.Container>
+        <S.Img src="./assets/img/illustration_login.svg" />
+        <p>Join</p>
 
         <label>
-          <Input
+          <input
             ref={inputEmail}
             type="email"
             placeholder="Email Adress"
@@ -56,7 +46,7 @@ function Join() {
         </label>
 
         <label>
-          <Input
+          <input
             ref={inputPassword}
             type="password"
             placeholder="Password"
@@ -64,19 +54,19 @@ function Join() {
           />{" "}
         </label>
 
-        <Directions>
-          <ForgotPassword to="/forgot">Forgot password?</ForgotPassword>
-        </Directions>
+        <S.Directions>
+          <S.ForgotPassword to="/forgot">Forgot password?</S.ForgotPassword>
+        </S.Directions>
 
-        <DivButtons>
-          <ButtonSend onClick={login}>Login</ButtonSend>
-        </DivButtons>
-        <DivForgot>
-          <Register to="/register">
+        <S.DivButtons>
+          <S.ButtonSend onClick={login}>Login</S.ButtonSend>
+        </S.DivButtons>
+        <S.DivRegister>
+          <S.LinkToRegister to="/register">
             New here? <span>Create an Account</span>
-          </Register>
-        </DivForgot>
-      </Container>
+          </S.LinkToRegister>
+        </S.DivRegister>
+      </S.Container>
     </>
   );
 }

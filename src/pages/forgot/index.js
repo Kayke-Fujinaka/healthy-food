@@ -1,19 +1,11 @@
-import React, { useState } from "react";
+import React from "react";
 import { useForm } from "react-hook-form";
 import { useHistory } from "react-router-dom";
 import { yupResolver } from "@hookform/resolvers/yup";
+
+import * as S from "./styles";
+
 import * as yup from "yup";
-import {
-  Form,
-  Logo,
-  H1,
-  Span,
-  DivButtons,
-  ButtonSend,
-  DivForgot,
-  Register,
-} from "./styles";
-import Swal from "sweetalert2";
 import firebase from "../../services/firebase";
 import { toast } from "react-toastify";
 
@@ -21,8 +13,8 @@ const schema = yup
   .object({
     email: yup
       .string()
-      .email("Digite um email válido")
-      .required("O email é obrigatório"),
+      .email("Please enter a valid email address")
+      .required("Email is required"),
   })
   .required();
 
@@ -30,8 +22,6 @@ function Forgot() {
   const {
     register,
     handleSubmit,
-    control,
-    watch,
     formState: { errors },
   } = useForm({
     resolver: yupResolver(schema),
@@ -40,53 +30,62 @@ function Forgot() {
   const history = useHistory();
 
   async function onSubmit(userData) {
-    
+
     const { email } = userData
     await firebase
       .auth()
       .sendPasswordResetEmail(email)
       .then(function () {
-        toast.success("Verifique seu email!", {
+        toast.success("Check your email!", {
           autoClose: 1000,
           pauseOnHover: false,
         })
         history.push("/");
         return;
       })
-          .catch(function (error) {
-            toast.error("Ocorreu algum problema. Tente Novamente!", {
-              autoClose: 1000,
-              pauseOnHover: false,
-            });
-          })
-  } 
-        
+      .catch(function (error) {
+        toast.error("Did something wrong happen. Try again!", {
+          autoClose: 1000,
+          pauseOnHover: false,
+        });
+      })
+  }
+
   return (
-          <>
-            <Form onSubmit={handleSubmit(onSubmit)}>
+    <>
+      <S.Form onSubmit={handleSubmit(onSubmit)}>
 
-              <Logo src="./assets/img/illustration_forgot.svg"></Logo>
-              <H1> Forgot Password </H1>
+        <S.Img
+          src="./assets/img/illustration_forgot.svg"
+          alt="A person who does not know the password"
+        />
+        <p>Forgot Password</p>
 
-              <label>
-                <input className={`input ${errors.email ? "error" : ""}`}
-                  type="email"
-                  placeholder="Email Adress" {...register("email", { required: true })}
-                />{" "}
-                {errors.email && <Span> {errors.email?.message}</Span>}
-              </label>
+        <label>
+          <input
+            className={`input ${errors.email ? "error" : ""}`}
+            type="email"
+            placeholder="Email Adress"
+            {...register("email", { required: true })}
+          />{" "}
+          {errors.email && <span>{errors.email?.message}</span>}
+        </label>
 
-              <DivForgot >
-                <Register to="/">Back to<span> Login</span> </Register>
-              </DivForgot>
+        <S.DivLogin >
+          <S.LinkToLogin to="/">
+            Back to <span>Login</span>
+          </S.LinkToLogin>
+        </S.DivLogin>
 
-              <DivButtons>
-                <ButtonSend type="submit">Recover Password</ButtonSend>
-              </DivButtons>
+        <S.DivButtons>
+          <S.ButtonSend type="submit">
+            Recover Password
+          </S.ButtonSend>
+        </S.DivButtons>
 
-            </Form>
-          </>
-        );
-      }
+      </S.Form>
+    </>
+  );
+}
 
 export default Forgot;

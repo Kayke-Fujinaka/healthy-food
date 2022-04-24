@@ -6,9 +6,39 @@ export const Container = styled.div`
     display: flex;
     flex-direction: column;
     align-items: center;
+
+    p {
+        text-align: center;
+        color: #1d164d;
+        margin-bottom: 15px;
+        font-size: 26px;
+        font-weight: 600;
+        @media (max-width: 375px){
+            font-size: 20px;
+        }
+    }
+
+    input {
+        display:block;
+        width: 320px;
+        height: 45px;
+        border: none;
+        border-radius: 10px;
+        box-shadow: -4px 4px 18px rgba(0, 0, 0, 0.09);
+        color: #969696;
+        margin: 10px auto 12px;
+        padding: 0 15px;
+        outline:none;
+        cursor: pointer;
+        @media (max-width: 375px){
+            width: 250px;
+            height: 35px;
+            font-size: 11px;
+        }
+    }
 `
 
-export const Logo = styled.img`
+export const Img = styled.img`
     display:block;
     width: 25%;
     margin: 50px auto 50px auto;
@@ -26,35 +56,6 @@ export const Logo = styled.img`
     }
     @media (max-width: 350px){
         width: 62%;
-    }
-`;
-
-export const H1 = styled.h1`
-    text-align: center;
-    color: #1d164d;
-    margin-bottom: 15px;
-    font-size: 26px;
-    @media (max-width: 375px){
-        font-size: 20px;
-    }
-`;
-
-export const Input = styled.input`
-    display:block;
-    width: 320px;
-    height: 45px;
-    border: none;
-    border-radius: 10px;
-    box-shadow: -4px 4px 18px rgba(0, 0, 0, 0.09);
-    color: #969696;
-    margin: 10px auto 12px;
-    padding: 0 15px;
-    outline:none;
-    cursor: pointer;
-    @media (max-width: 375px){
-        width: 250px;
-        height: 35px;
-        font-size: 11px;
     }
 `;
 
@@ -141,13 +142,13 @@ export const ButtonSend = styled.button`
     }
 `;
 
-export const DivForgot = styled.div`
+export const DivRegister = styled.div`
     display: block;
     text-align: center;
     margin-top: 30px;
 `;
 
-export const Register = styled(Link)`
+export const LinkToRegister = styled(Link)`
     display:block;
     color:#000000;
     font-style: normal;

@@ -27,10 +27,9 @@ function Profile() {
     return (
         <S.Container>
             <S.Icon src="./assets/img/icon-perfil.svg" />
-            <S.H1>Profile Informations</S.H1>
+            <p>Profile Informations</p>
               <S.Info>{data.nome}</S.Info>
               <S.Info>{data.email}</S.Info>
-              <S.Info>{data.data}</S.Info>
               <S.Info>{data.cpf}</S.Info>
               <S.Info>{data.cep}</S.Info>
               <S.Info>{data.cidade}</S.Info>

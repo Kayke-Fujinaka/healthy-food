@@ -6,6 +6,16 @@ export const Container = styled.div`
     display: flex;
     flex-direction: column;
     align-items: center;
+
+    p {
+        text-align: center;
+        color: #1d164d;
+        margin-bottom: 15px;
+        font-size: 26px;
+        @media (max-width: 375px){
+            font-size: 20px;
+        }
+    }
 `
 
 export const Icon = styled.img`
@@ -29,24 +39,15 @@ export const Icon = styled.img`
     }
 `;
 
-export const H1 = styled.h1`
-    text-align: center;
-    color: #1d164d;
-    margin-bottom: 15px;
-    font-size: 26px;
-    @media (max-width: 375px){
-        font-size: 20px;
-    }
-`;
-
 export const Info = styled.label`
     display:block;
-    width: 320px;
-    height: 45px;
+    word-break: break-all;
+    width: 400px;
+    height: 100%;
     border-radius: 10px;
     box-shadow: -4px 4px 18px rgba(0, 0, 0, 0.09);
     color: #969696;
-    margin: 10px auto 12px;
+    margin: 10px 0;
     padding: 15px 15px;
     @media (max-width: 375px){
         width: 250px;

@@ -2,10 +2,20 @@ import styled from "styled-components";
 import { Link } from "react-router-dom";
 
 export const Form = styled.form`
-    width: 100%;
     display: flex;
     flex-direction: column;
     align-items: center;
+
+    p {
+        text-align: center;
+        color: #1d164d;
+        margin-bottom: 15px;
+        font-size: 26px;
+        font-weight: 600;
+        @media (max-width: 375px){
+            font-size: 20px;
+        }
+    }
 
     label {
         .input {
@@ -16,8 +26,8 @@ export const Form = styled.form`
             border-radius: 10px;
             box-shadow: -4px 4px 18px rgba(0, 0, 0, 0.09);
             color: #969696;
-            margin: 10px auto 12px;
-            padding: 0 15px;
+            margin: 10px auto;
+            padding: 0 10px;
             outline:none;
             cursor: pointer;
             @media (max-width: 375px){
@@ -30,13 +40,24 @@ export const Form = styled.form`
         .error{
             border:1px solid red
         }
+
+        span {
+            font-size: 11px;
+            margin-left: 10px;
+            position: absolute;
+            margin-top: -9px;
+            color: #FF2100;
+            @media (max-width: 375px){
+                font-size: 9px;
+            }
+        }
     }
 `
 
-export const Logo = styled.img`
+export const Img = styled.img`
     display:block;
     width: 25%;
-    margin: 50px auto 40px auto;
+    margin: 50px auto;
     @media (max-width:1000px){
             width: 35%;
     }
@@ -54,34 +75,13 @@ export const Logo = styled.img`
     }
 `;
 
-export const H1 = styled.h1`
-    text-align: center;
-    color: #1d164d;
-    margin-bottom: 15px;
-    font-size: 26px;
-    @media (max-width: 375px){
-        font-size: 20px;
-    }
-`;
-
-export const Span = styled.span`
-    font-size: 11px;
-    margin-left: 10px;
-    position: absolute;
-    margin-top: -9px;
-    color: #FF2100;
-    @media (max-width: 375px){
-        font-size: 9px;
-    }
-`
-
-export const DivForgot = styled.div`
+export const DivLogin = styled.div`
     display: block;
     text-align: center;
     margin-top: 15px;
 `;
 
-export const Register = styled(Link)`
+export const LinkToLogin = styled(Link)`
     display:block;
     color:#000000;
     font-style: normal;

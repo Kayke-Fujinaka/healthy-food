@@ -1,47 +1,36 @@
 import React, { useState } from "react";
-import { useForm } from "react-hook-form";
 import { useHistory } from "react-router-dom";
+import { useForm } from "react-hook-form";
 import { yupResolver } from "@hookform/resolvers/yup";
 import * as yup from "yup";
-import { toast } from "react-toastify";
-import firebase from "../../services/firebase";
-import {
-  Form,
-  Logo,
-  H1,
-  Span,
-  ButtonSearch,
-  DivButtons,
-  ButtonBack,
-  ButtonSend,
-  DivCep,
-  DivForgot,
-  Login,
-} from "./styles";
-import Swal from "sweetalert2";
+
+import * as S from "./styles";
+
 import axios from "axios";
+import { toast } from "react-toastify";
+import Swal from "sweetalert2";
+import firebase from "../../services/firebase";
 
 const schema = yup
   .object({
-    name: yup.string().required("O nome é obrigatório"),
+    name: yup.string().required("Name is required"),
     email: yup
       .string()
-      .email("Digite um email válido")
-      .required("O email é obrigatório"),
+      .email("Enter a valid email address")
+      .required("Email is required"),
     password: yup
       .string()
-      .min(6, "A senha deve ter pelo menos 6 dígitos")
-      .required("A senha é obrigatória"),
+      .min(6, "Password must be at least 6 digits")
+      .required("Password is required"),
     confirmPassword: yup
       .string()
-      .required("A Confirmação de Senha é obrigatória")
-      .oneOf([yup.ref("password")], "As senhas devem ser iguais"),
-    date: yup.string().required("A Data de Nascimento é obrigatória"),
+      .required("Password Confirmation is required")
+      .oneOf([yup.ref("password")], "Passwords must be the same"),
     cpf: yup
       .string()
-      .min(11, "Mínimo 11 digitos")
-      .max(11, "Máximo 11 digitos")
-      .required("O CPF é obrigatório"),
+      .min(11, "Minimum 11 digits")
+      .max(11, "Maximum 11 digits")
+      .required("CPF is required"),
   })
   .required();
 
@@ -56,8 +45,6 @@ function Register() {
   const {
     register,
     handleSubmit,
-    control,
-    watch,
     formState: { errors },
   } = useForm({
     resolver: yupResolver(schema),
@@ -65,7 +52,7 @@ function Register() {
 
   async function adressGet() {
     if (cep.length <= 0) {
-      toast.error("Verifique as informações do seu cep", {
+      toast.error("Check your CEP information.", {
         autoClose: 1000,
         pauseOnHover: false,
       });
@@ -80,7 +67,7 @@ function Register() {
       setCity(data.localidade);
       setAdress(true);
     } catch (error) {
-      toast.error("Algo de errado aconteceu, tente novamente", {
+      toast.error("Something went wrong, try again", {
         autoClose: 1000,
         pauseOnHover: false,
       });
@@ -90,7 +77,7 @@ function Register() {
   async function onSubmit(userData) {
     const { email, password, name, cpf, date } = userData;
     if (city.length <= 0) {
-      toast.error("Pesquise pelo seu CEP", {
+      toast.error("Search by your CEP", {
         autoClose: 1000,
         pauseOnHover: false,
       });
@@ -110,13 +97,12 @@ function Register() {
             email: email,
             nome: name,
             cpf: cpf,
-            data: date,
           })
         })
       Swal.fire({
         icon: "success",
         title: "OK!",
-        text: "Sua conta foi criada com sucesso!",
+        text: "Your account has been successfully created!",
       });
       history.push("/");
       return;
@@ -127,7 +113,7 @@ function Register() {
           Swal.fire({
             icon: "error",
             title: "Oops...",
-            text: "Email já existe!",
+            text: "Email already exists!",
           });
 
           return
@@ -136,7 +122,7 @@ function Register() {
           Swal.fire({
             icon: "error",
             title: "Oops...",
-            text: "Algo deu errado tente novamente!",
+            text: "Something went wrong, try again!",
           });
 
           return
@@ -146,10 +132,10 @@ function Register() {
 
   return (
     <>
-      <Form onSubmit={handleSubmit(onSubmit)}>
-        <Logo src="./assets/img/illustration_register.svg"></Logo>
+      <S.Form onSubmit={handleSubmit(onSubmit)}>
+        <S.Img src="./assets/img/illustration_register.svg" />
 
-        <H1>Register</H1>
+        <p>Register</p>
 
         <label>
           <input
@@ -158,7 +144,7 @@ function Register() {
             placeholder="Name"
             {...register("name", { required: true })}
           />{" "}
-          {errors.name && <Span>{errors.name?.message}</Span>}
+          {errors.name && <span>{errors.name?.message}</span>}
         </label>
 
         <label>
@@ -168,7 +154,7 @@ function Register() {
             placeholder="Email Adress"
             {...register("email", { required: true })}
           />{" "}
-          {errors.email && <Span>{errors.email?.message}</Span>}
+          {errors.email && <span>{errors.email?.message}</span>}
         </label>
 
         <label>
@@ -178,7 +164,7 @@ function Register() {
             placeholder="Password"
             {...register("password", { required: true })}
           />{" "}
-          {errors.password && <Span>{errors.password?.message}</Span>}
+          {errors.password && <span>{errors.password?.message}</span>}
         </label>
 
         <label>
@@ -189,18 +175,8 @@ function Register() {
             {...register("confirmPassword", { required: true })}
           />{" "}
           {errors.confirmPassword && (
-            <Span>{errors.confirmPassword?.message}</Span>
+            <span>{errors.confirmPassword?.message}</span>
           )}
-        </label>
-
-        <label>
-          <input
-            className={`input ${errors.date ? "error" : ""}`}
-            type="date"
-            placeholder="Date"
-            {...register("date", { required: true })}
-          />{" "}
-          {errors.date && <Span>{errors.date?.message}</Span>}
         </label>
 
         <label>
@@ -210,10 +186,10 @@ function Register() {
             placeholder="CPF"
             {...register("cpf", { required: true })}
           />
-          {errors.cpf && <Span>{errors.cpf?.message}</Span>}
+          {errors.cpf && <span>{errors.cpf?.message}</span>}
         </label>
 
-        <DivCep>
+        <S.DivCep>
           <input
             className={`input ${errors.cep ? "error" : ""}`}
             type="text"
@@ -221,10 +197,10 @@ function Register() {
             onChange={(e) => setCep(e.target.value)}
             required
           />
-          <ButtonSearch type="button" onClick={adressGet}>
+          <S.ButtonSearchCep type="button" onClick={adressGet}>
             <i className="bx bx-search"></i>
-          </ButtonSearch>
-        </DivCep>
+          </S.ButtonSearchCep>
+        </S.DivCep>
 
         {adress ? (
           <>
@@ -260,17 +236,17 @@ function Register() {
           </>
         ) : null}
 
-        <DivButtons>
-          <ButtonBack to="/">Back</ButtonBack>
-          <ButtonSend type="submit">Send</ButtonSend>
-        </DivButtons>
+        <S.DivButtons>
+          <S.ButtonBack to="/">Back</S.ButtonBack>
+          <S.ButtonSend type="submit">Send</S.ButtonSend>
+        </S.DivButtons>
 
-        <DivForgot>
-          <Login to="/">
+        <S.DivSingIn>
+          <S.LinkToLogin to="/">
             Already Have an Account? <span>Sign in</span>
-          </Login>
-        </DivForgot>
-      </Form>
+          </S.LinkToLogin>
+        </S.DivSingIn>
+      </S.Form>
     </>
   );
 }

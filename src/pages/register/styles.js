@@ -30,6 +30,46 @@ export const Form = styled.form`
     .error {
       border: 1px solid #FF2100;
     }
+
+    span {
+      color: #FF2100;
+      font-size: 11px;
+      margin-left: 10px;
+      position: absolute;
+      margin-top: -9px;
+      @media (max-width: 375px) {
+        font-size: 9px;
+      }
+    }
+  }
+
+  p {
+    text-align: center;
+    color: #1d164d;
+    margin-bottom: 15px;
+    font-size: 26px;
+    font-weight: 600;
+    @media (max-width: 375px) {
+      font-size: 20px;
+    }
+  }
+`;
+
+export const Img = styled.img`
+  display: block;
+  width: 13%;
+  margin: 20px auto 20px auto;
+  @media (max-width: 1000px) {
+    width: 30%;
+  }
+  @media (max-width: 650px) {
+    width: 40%;
+  }
+  @media (max-width: 450px) {
+    width: 50%;
+  }
+  @media (max-width: 350px) {
+    width: 55%;
   }
 `;
 
@@ -58,7 +98,7 @@ export const DivCep = styled.div`
   }
 `;
 
-export const ButtonSearch = styled.button`
+export const ButtonSearchCep = styled.button`
   border: none;
   cursor: pointer;
   padding: 10px 8px;
@@ -76,57 +116,6 @@ export const ButtonSearch = styled.button`
   }
   &:active {
     opacity: 0.5;
-  }
-`;
-
-export const Logo = styled.img`
-  display: block;
-  width: 13%;
-  margin: 20px auto 20px auto;
-  @media (max-width: 1000px) {
-    width: 30%;
-  }
-  @media (max-width: 650px) {
-    width: 40%;
-  }
-  @media (max-width: 450px) {
-    width: 50%;
-  }
-  @media (max-width: 350px) {
-    width: 55%;
-  }
-`;
-
-export const H1 = styled.h1`
-  text-align: center;
-  color: #1d164d;
-  margin-bottom: 15px;
-  font-size: 26px;
-  @media (max-width: 375px) {
-    font-size: 20px;
-  }
-`;
-
-export const Span = styled.span`
-  color: #FF2100;
-  font-size: 11px;
-  margin-left: 10px;
-  position: absolute;
-  margin-top: -9px;
-  @media (max-width: 375px) {
-    font-size: 9px;
-  }
-`;
-
-export const SpanCep = styled.span`
-  color: #FF2100;
-  font-size: 11px;
-  margin-left: 10px;
-  position: absolute;
-  z-index: 1;
-  margin-top: 48px;
-  @media (max-width: 375px) {
-    font-size: 9px;
   }
 `;
 
@@ -186,13 +175,13 @@ export const ButtonSend = styled.button`
   }
 `;
 
-export const DivForgot = styled.div`
+export const DivSingIn = styled.div`
   display: block;
   text-align: center;
   margin-top: 20px;
 `;
 
-export const Login = styled(Link)`
+export const LinkToLogin = styled(Link)`
   display: block;
   color: #000000;
   font-style: normal;

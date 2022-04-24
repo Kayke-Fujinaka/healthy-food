@@ -1,29 +1,26 @@
 import React from "react";
 
-import {
-    Container,
-    Logo,
-    H1,
-    DivForgot,
-    Register,
-  } from "./styles";
+import * as S from "./styles";
 
 function Error() {
   return (
     <>
-      <Container>
-        <Logo src="./assets/img/illustration_error.svg"></Logo>
-        <H1>This is not the web page you are looking for</H1>
+      <S.ContainerMain>
+        <S.Img 
+          src="./assets/img/illustration_error.svg" 
+          alt="Image of Error 404"
+        />
+        <p id="paragraphInfo">This is not the web page you are looking for</p>
 
         <p>The link may not be working or the Page may have been removed. Check that the link you are trying to open is correct.</p>
 
-        <DivForgot>
-          <Register to="/">
+        <S.DivBackToHome>
+          <S.LinkToHome to="/">
             Back to <span>Login</span>
-          </Register>
-        </DivForgot>
-
-      </Container>
+          </S.LinkToHome>
+        </S.DivBackToHome>
+      </S.ContainerMain>
+      
     </>
   );
 }

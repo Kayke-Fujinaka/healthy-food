@@ -157,10 +157,10 @@ export const ImageHome = styled.img`
 `;
 
 export const SectionRecipes = styled.section`
-  padding: 25px 0 60px;
+  padding: 70px 0 70px;
   background-color: #FAFAFA;
   @media (max-width: 550px) {
-    padding-bottom: 30px;
+    padding: 40px 0 40px;
   }
 `;
 
@@ -170,8 +170,9 @@ export const DivCardRecipes = styled.div`
   flex-wrap: wrap;
   margin-top: 40px;
   gap: 60px;
-  @media (max-width: 450px) {
+  @media (max-width: 455px) {
     margin-top: 20px;
+    gap: 20px;
   }
 `;
 
@@ -267,14 +268,14 @@ export const SectionServices = styled.section`
   @media (max-width: 455px) {
     display: block;
     text-align: center;
+    padding: 40px 0;
   }
 `;
 
 export const ImageServices = styled.img`
   width: 50%;
   @media (max-width: 455px) {
-    display: block;
-    text-align: left;
+    display: none;
   }
 `;
 
@@ -301,7 +302,7 @@ export const ParagraphServices = styled.p`
     margin: 2% 0;
   }
   @media (max-width: 455px) {
-    font-size: 9px;
+    font-size: 12px;
     margin: 2% 0;
     text-align: center;
   }
@@ -330,7 +331,7 @@ export const KnowMoreServices = styled.a`
   @media (max-width: 1000px) {
     margin-top: 10px;
     padding: 4px 0;
-    font-size: 0.7em;
+    font-size: 0.9em;
   }
   @media (max-width: 455px) {
     margin: 15px 30%;
@@ -339,11 +340,14 @@ export const KnowMoreServices = styled.a`
 `;
 
 export const SectionBlog = styled.section`
-  padding: 30px 0 50px 0;
+  padding: 70px 0 70px;
   margin: 0 20px;
   background: #FAFAFA;
   .containerCarousel {
     z-index: 1;
+  }
+  @media (max-width: 455px) {
+    padding: 40px 0 40px;
   }
 `;
 

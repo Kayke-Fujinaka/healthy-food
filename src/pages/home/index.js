@@ -1,7 +1,9 @@
 import React, { useState } from "react";
-import * as S from "./styles";
 import Carousel from "react-multi-carousel";
 import "react-multi-carousel/lib/styles.css";
+
+import * as S from "./styles";
+
 import Header from "../../components/Header";
 
 const responsive = {

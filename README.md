@@ -1,12 +1,12 @@
-# GCB Test: Healthy Eating
+# Healthy Food
 
-<img src="./public/assets/img/Gif.gif" width="800px" height="400px" alt="Gif do Teste">
+<img src="./public/assets/img/Gif.gif" alt="Gif do Teste">
 
->  The Project is a test that simulates a website of recipes for healthy foods. Inside it has a Registration and Login system.
+>  O Projeto é um teste que simula um site de receitas de alimentos saudáveis. Dentro dele tem um sistema de Cadastro e Login.
 
-Check the Application: https://healthy-foood.netlify.app <br>
-Video showing the application: https://www.youtube.com/watch?v=jwgasXZhZMQ
-## :page_facing_up: Explanation
+Confira a aplicação: https://healthy-foood.netlify.app <br>
+Vídeo da aplicação: https://www.youtube.com/watch?v=jwgasXZhZMQ
+## :page_facing_up: Explicação
 
 A primeira página do projeto é a de login que apresenta um campo de email e senha. Os dois campos poderão ser preenchidos, após criar uma conta na página de registro e terem o acesso para a página principal.
 
@@ -19,41 +19,41 @@ Em caso de o usuário tentar acessar alguma rota inexistente, ele será direcion
 
 O link do vídeo do Youtube apresentando todo o projeto está logo acima.
 
-## 📁 Pages
+## 📁 Páginas
 
-The site consists of 6 different pages:
+O site é composto por 6 páginas diferentes:
 
-- **Login:** The person can place them to place the data that has registered and to enter in the main page.
-- **Register:** The person can create their account on this page.
-- **Forgot Password:** The person can enter their email and receive a message in the email to reset their password.
-- **Home:** It is the main page of the project that presents a website of healthy recipes.
-- **Profile Informations:** A page that presents the data that the person has entered into the record.
-- **Error 404:** A page that appears when a person enters a route does not exist. Thus, just below presents a link to return to the login page.
-## :dart: Features ##
+- **Login:** A pessoa pode colocá-los para colocar os dados que cadastrou e entrar na página principal.
+- **Cadastre-se:** A pessoa pode criar sua conta nesta página.
+- **Esqueci a senha:** A pessoa pode digitar seu e-mail e receber uma mensagem no e-mail para redefinir sua senha.
+- **Home:** É a página principal do projeto que apresenta um site de receitas saudáveis.
+- **Informações do perfil:** Uma página que apresenta os dados que a pessoa inseriu no registro.
+- **Erro 404:** Uma página que aparece quando uma pessoa entra em uma rota que não existe. Assim, logo abaixo apresenta um link para retornar à página de login.
+## :dart: Etapas ##
 
-:heavy_check_mark: Healthy Eating Landing Page;\
-:heavy_check_mark: Register Page;\
-:heavy_check_mark: Login Page;\
-:heavy_check_mark: Forgot Password Page;\
-:heavy_check_mark: Error 404 Page;\
-:heavy_check_mark: Use the Post Office API to fill in the other fields that make up the address;\
-:heavy_check_mark: Store form data in Firebase;\
-:heavy_check_mark: Create the hamburger menu in the header;\
-:heavy_check_mark: Store form data in Firebase;\
-:heavy_check_mark: Password Reset with Firebase;\
-:heavy_check_mark: Home Private Route;\
-:heavy_check_mark: Button Logout;\
-:heavy_check_mark: Creating the page that shows the user information;\
-:heavy_check_mark: Home Private Route;
+:heavy_check_mark: Página Home;\
+:heavy_check_mark: Responsividade da página Home;\
+:heavy_check_mark: Página de Registro;\
+:heavy_check_mark: Responsividade da página de Registro;\
+:heavy_check_mark: Página de Login;\
+:heavy_check_mark: Responsividade da página de Login;\
+:heavy_check_mark: Página para redefinir a senha;\
+:heavy_check_mark: Página Error 404;\
+:heavy_check_mark: API dos correios para preencher os demais campos que compõem o CEP;\
+:heavy_check_mark: Cria o menu de hambúrguer no Header;\
+:heavy_check_mark: Armazenar dados do formulário no Firebase;\
+:heavy_check_mark: Redefinição de senha com Firebase;\
+:heavy_check_mark: Rota Privada da Home;\
+:heavy_check_mark: Botão para dar Logout;\
+:heavy_check_mark: Criando a página que mostra as informações do usuário;\
+:heavy_check_mark: Rota Privada Home;\
+:heavy_check_mark: Finalizado;
 
-## :rocket: Technologies ##
+## :rocket: Tecnologias ##
 
-The following tools were used in this project:
+Neste projeto foram utilizadas as seguintes ferramentas:
 
-- [Html](https://developer.mozilla.org/pt-BR/docs/Web/HTML/Element/html/)  
-- [CSS](https://developer.mozilla.org/pt-BR/docs/Web/CSS)  
-- [JavaScript](https://developer.mozilla.org/pt-BR/docs/Web/JavaScript) 
-- [React](https://pt-br.reactjs.org/)
+- [ReactJs](https://pt-br.reactjs.org/)
 - [Axios](https://axios-http.com/docs/intro)
 - [React Hook Form](https://react-hook-form.com/get-started)
 - [Yup](https://www.npmjs.com/package/yup)
@@ -66,11 +66,11 @@ The following tools were used in this project:
 
 
 
-## :closed_book: Requirements ##
+## :closed_book: Requisitos ##
 
-Before starting :checkered_flag:, you need to have [Git](https://git-scm.com) and [Node](https://nodejs.org/en/) installed.
+Antes de iniciar :checkered_flag:, você precisa ter [Git](https://git-scm.com) e [Node](https://nodejs.org/en/) instalados.
 
-## :checkered_flag: Starting ##
+## :checkered_flag: Iniciando ##
 
 ```bash
 # Clone this project
@@ -84,9 +84,9 @@ $ yarn start or npm start
 # The server will initialize in the <http://localhost:3000>
 ```
 
-## 🤝 Collaborators
+## 🤝 Colaboradores
 
-We thank the following people who contributed to this project:
+Agradecemos às seguintes pessoas que contribuíram para este projeto:
 
 <table>
   <tr>
@@ -101,10 +101,10 @@ We thank the following people who contributed to this project:
   </tr>
 </table>
 
-## 📝 License
+## 📝 Licença
 
-This project is under license. See the [LICENSE](LICENSE.md) file for more details.
+Este projeto está sob licença. Consulte o arquivo [LICENSE](LICENSE.md) para obter mais detalhes.
 
 &#xa0;
 
-<a href="#top">Back to top</a>
+<a href="#top">Volte para o Topo</a>
