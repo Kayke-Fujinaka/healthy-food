@@ -1,16 +1,16 @@
-// import React from 'react'
-// import { Route, Redirect } from 'react-router-dom'
+import React from 'react'
+import { Route, Redirect } from 'react-router-dom'
 
-// function PrivateRoute({ component, ...rest }) {
+function PrivateRoute({ component, ...rest }) {
 
-//     const user = localStorage.getItem("user");
+    const user = localStorage.getItem("user");
 
-//     if(!user){
-//         return <Redirect to="/" />
-//     }
+    if(!user){
+        return <Redirect to="/" />
+    }
 
-//     return <Route {...rest} component={component} />
-// }
+    return <Route {...rest} component={component} />
+}
 
-// export default PrivateRoute
+export default PrivateRoute
 

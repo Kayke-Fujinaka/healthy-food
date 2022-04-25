@@ -16,8 +16,7 @@ function Routes() {
                 <Route exact path="/" component={Join}/>
                 <Route exact path="/Register" component={Register}/>
                 <Route exact path="/Forgot" component={Forgot} />
-                <Route exact path="/Home" component={Home} />
-                {/* <PrivateRoute exact path="/Home" component={Home} /> */}
+                <PrivateRoute exact path="/Home" component={Home} />
                 <Route exact path="/Profile" component={Profile} />
                 <Route path="*" component={Error} /> 
             </Switch>
