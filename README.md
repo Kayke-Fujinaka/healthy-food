@@ -91,7 +91,7 @@ Caso clone o projeto, você vai precisar criar o seu próprio projeto no firebas
   AUTH_DOMAIN: "example-8a13f.firebaseapp.com",
   PROJECT_ID: "example-8a13f",
   STORAGE_BUCKET: "example-88a13f.appspot.com",
-  MESSASING_SENDER_ID: "65936679370",
+  MESSAGING_SENDER_ID: "65936679370",
   APP_ID: "1:659905779370:web:16c3ac97ef413h13ga2d3",
   MEASUREMENT_ID: "G-BL1CGU42B6"
 ```
