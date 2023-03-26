@@ -1,57 +1,58 @@
-# Healthy Food
+<h1 align="center">🍉 HealthyFood</h1>
 
-<img src="./public/assets/img/Gif.gif" alt="Gif do Teste">
+![Gif do Teste](./public/assets/img/Gif.gif)
 
->  O Projeto é um teste que simula um site de receitas de alimentos saudáveis. Dentro dele tem um sistema de Cadastro e Login.
+> The project is a test that simulates a healthy food recipe website. It includes a registration and login system.
 
-Confira a aplicação: https://healthy-foood.netlify.app <br>
-Vídeo da aplicação: https://www.youtube.com/watch?v=jwgasXZhZMQ
-## :page_facing_up: Explicação
+Check out the application: https://healthy-foood.netlify.app <br>
+Video of the application: https://www.youtube.com/watch?v=jwgasXZhZMQ
 
-A primeira página do projeto é a de login que apresenta um campo de email e senha. Os dois campos poderão ser preenchidos, após criar uma conta na página de registro e terem o acesso para a página principal.
+## :page_facing_up: Explanation
 
-A página de registro apresenta 7 campos para serem preenchidos, sendo: nome, email, senha, confirmação de senha, data de nascimento, CPF e CEP. Os campos possuem uma validação, então precisam dos requisitos exigidos, sendo: não deixar um campo vazio, um email válido, uma senha de no mínimo 6 dígitos, o campo de senha e de confirmação de senha devem ser iguais, o CPF ter no mínimo e no máximo 11 dígitos e o CEP precisa ser um existente, pois está sendo preenchido com a API dos correios.  Caso, não seja preenchido corretamente. Na tela aparecerá um alerta notificando que precisa de mudança.
+The first page of the project is the login page which features fields for email and password. Both fields can be filled after creating an account on the registration page and gaining access to the main page.
 
-Após a criação da conta, os dados serão armazenados no Firebase que possibilitarão o acesso pela página de login. O login deve ser preenchido com o email idêntico ao que foi registrado, então letras maiúsculas e minúsculas devem ser seguidas. A senha também segue as condições do email, e possui uma página específica para a recuperação de senha, que através do Firebase um email será enviado para o usuário. Ao logar, a pessoa será direcionada para a página principal que possui algumas seções e um menu com a opção de entrar no seu perfil que apresenta as informações do usuário e outro botão de logout que desloga você da página. A página de home está responsiva e com um menu hambúrguer ao chegar nos 800 de largura de resolução.  Além disso, foi adicionado um carrossel na seção de “Read Our Blog”.
+The registration page features 7 fields to be filled in: name, email, password, password confirmation, date of birth, CPF, and CEP. The fields are validated, so they must meet certain requirements, such as not leaving a field blank, a valid email, a password of at least 6 digits, the password and password confirmation fields must match, the CPF must have a minimum and maximum of 11 digits, and the CEP must be an existing one, as it is being filled in with the Post Office API. If not filled in correctly, an alert will appear on the screen notifying the user that changes need to be made.
 
-Não tem como acessar a página de home sem estar logado, pois ela está como uma rota privada, então precisa registrar uma conta. Com isso, para se deslogar é só clicar no botão do menu como dito no parágrafo acima.
-Em caso de o usuário tentar acessar alguma rota inexistente, ele será direcionado para uma página que exibe o Erro 404 e logo abaixo um link para ser direcionado a página de Login.
+After creating an account, the data will be stored in Firebase, which will enable access through the login page. The login must be filled in with the identical email registered, so upper and lowercase letters must be followed. The password also follows the email's conditions and has a specific page for password recovery, where an email will be sent to the user through Firebase. When logging in, the user will be directed to the main page, which features several sections and a menu with the option to enter their profile, which displays user information, and another logout button that logs you out of the page. The home page is responsive and features a hamburger menu when the resolution reaches 800 width. In addition, a carousel has been added to the "Read Our Blog" section.
 
-O link do vídeo do Youtube apresentando todo o projeto está logo acima.
+It is not possible to access the home page without being logged in because it is a private route, so you need to register an account. To log out, just click the menu button as mentioned in the above paragraph. In case the user tries to access a nonexistent route, they will be directed to a page displaying Error 404 and a link below to return to the login page.
 
-## 📁 Páginas
+The link to the Youtube video presenting the entire project is above.
 
-O site é composto por 6 páginas diferentes:
+## 📁 Pages
 
-- **Login:** A pessoa pode colocá-los para colocar os dados que cadastrou e entrar na página principal.
-- **Cadastre-se:** A pessoa pode criar sua conta nesta página.
-- **Esqueci a senha:** A pessoa pode digitar seu e-mail e receber uma mensagem no e-mail para redefinir sua senha.
-- **Home:** É a página principal do projeto que apresenta um site de receitas saudáveis.
-- **Informações do perfil:** Uma página que apresenta os dados que a pessoa inseriu no registro.
-- **Erro 404:** Uma página que aparece quando uma pessoa entra em uma rota que não existe. Assim, logo abaixo apresenta um link para retornar à página de login.
-## :dart: Etapas ##
+The site is composed of 6 different pages:
 
-:heavy_check_mark: Página Home;\
-:heavy_check_mark: Responsividade da página Home;\
-:heavy_check_mark: Página de Registro;\
-:heavy_check_mark: Responsividade da página de Registro;\
-:heavy_check_mark: Página de Login;\
-:heavy_check_mark: Responsividade da página de Login;\
-:heavy_check_mark: Página para redefinir a senha;\
-:heavy_check_mark: Página Error 404;\
-:heavy_check_mark: API dos correios para preencher os demais campos que compõem o CEP;\
-:heavy_check_mark: Cria o menu de hambúrguer no Header;\
-:heavy_check_mark: Armazenar dados do formulário no Firebase;\
-:heavy_check_mark: Redefinição de senha com Firebase;\
-:heavy_check_mark: Rota Privada da Home;\
-:heavy_check_mark: Botão para dar Logout;\
-:heavy_check_mark: Criando a página que mostra as informações do usuário;\
-:heavy_check_mark: Rota Privada Home;\
-:heavy_check_mark: Finalizado;
+- **Login:** Users can enter their registered data and log in to the main page.
+- **Register:** Users can create their accounts on this page.
+- **Forgot Password:** Users can enter their email and receive a message in their email to reset their password.
+- **Home:** The main page of the project, which features a healthy food recipe website.
+- **Profile Information:** A page that displays the data the user entered in registration.
+- **Error 404:** A page that appears when a person enters a route that does not exist. Below it presents a link to return to the login page.
 
-## :rocket: Tecnologias ##
+## :dart: Steps
 
-Neste projeto foram utilizadas as seguintes ferramentas:
+:heavy_check_mark: Home page;\
+:heavy_check_mark: Responsiveness of Home page;\
+:heavy_check_mark: Registration page;\
+:heavy_check_mark: Responsiveness of registration page;\
+:heavy_check_mark: Login page;\
+:heavy_check_mark: Responsiveness of login page;\
+:heavy_check_mark: Password reset page;\
+:heavy_check_mark: Error 404 page;\
+:heavy_check_mark: API for filling in additional fields of the postal code;\
+:heavy_check_mark: Creating a hamburger menu in the header;\
+:heavy_check_mark: Storing form data in Firebase;\
+:heavy_check_mark: Password reset with Firebase;\
+:heavy_check_mark: Private Home route;\
+:heavy_check_mark: Logout button;\
+:heavy_check_mark: Creating a page that shows user information;\
+:heavy_check_mark: Private Home route;\
+:heavy_check_mark: Finished;
+
+## :rocket: Technologies
+
+The following tools were used in this project:
 
 - [ReactJs](https://pt-br.reactjs.org/)
 - [Axios](https://axios-http.com/docs/intro)
@@ -60,17 +61,15 @@ Neste projeto foram utilizadas as seguintes ferramentas:
 - [SweetAlert2](https://sweetalert.js.org/docs/)  
 - [Toast](https://fkhadra.github.io/react-toastify/introduction/)
 - [Firebase](https://firebase.google.com/docs?hl=pt)  
-- [LocalStorage](https://developer.mozilla.org/pt-BR/docs/Web/API/Window/localStorage)
+- [Local Storage](https://developer.mozilla.org/pt-BR/docs/Web/API/Window/localStorage)
 - [Carousel](https://www.npmjs.com/package/react-multi-carousel)
 - [React Icon](https://react-icons.github.io/react-icons/)
 
+## :closed_book: Requirements ##
 
+Before starting, you need to have [Git](https://git-scm.com) and [Node](https://nodejs.org/en/) installed on your computer.
 
-## :closed_book: Requisitos ##
-
-Antes de iniciar :checkered_flag:, você precisa ter [Git](https://git-scm.com) e [Node](https://nodejs.org/en/) instalados.
-
-## :checkered_flag: Iniciando ##
+## :checkered_flag: Getting Started ##
 
 ```bash
 # Clone this project
@@ -84,7 +83,7 @@ $ yarn start or npm start
 # The server will initialize in the <http://localhost:3000>
 ```
 
-Caso clone o projeto, você vai precisar criar o seu próprio projeto no firebase. Depois disso no arquivo .env irá colocar seu token do Firebase. Vou deixar um exemplo abaixo:
+If you clone the project, you will need to create your own Firebase project. After that, put your Firebase token in the .env file. I'll leave an example below:
 
 ```bash
   API_KEY: "AIzah63dg9emUtIKmMCvrkSJLw-GZIl0a8qmEs",
@@ -96,7 +95,7 @@ Caso clone o projeto, você vai precisar criar o seu próprio projeto no firebas
   MEASUREMENT_ID: "G-BL1CGU42B6"
 ```
 
-Depois disso passar para o arquivo que está o firebase. Por exemplo:
+After that, pass it to the file where Firebase is located. For example:
 
 ```bash
   const firebaseConfig = {
@@ -110,27 +109,27 @@ Depois disso passar para o arquivo que está o firebase. Por exemplo:
 };
 ```
 
-## 🤝 Colaboradores
+## 🤝 Contributors
 
-Agradecemos às seguintes pessoas que contribuíram para este projeto:
+We want to thank the following people who contributed to this project:
 
 <table>
   <tr>
     <td align="center">
       <a href="#">
-        <img src="https://avatars.githubusercontent.com/u/98772000?s=400&u=80de9af672be7f75cc7a546838552cf63d5b82fe&v=4" width="140px;" alt="Foto do Kayke Fujinaka no GitHub"/><br>
+        <img src="https://avatars.githubusercontent.com/u/98772000?s=400&u=80de9af672be7f75cc7a546838552cf63d5b82fe&v=4" width="100px;" alt="Kayke Fujinaka's photo on GitHub"/><br>
         <sub>
-          <b>Kayke Alves Fujinaka</b>
+          <b>Kayke Fujinaka</b>
         </sub>
       </a>
     </td>
   </tr>
 </table>
 
-## 📝 Licença
+## 📝 License
 
-Este projeto está sob licença. Consulte o arquivo [LICENSE](LICENSE.md) para obter mais detalhes.
+This project is under license. See the [LICENSE](LICENSE.md) file for more details.
 
 &#xa0;
 
-<a href="#top">Volte para o Topo</a>
+<a href="#top">Back to top</a>
